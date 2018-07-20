@@ -20,8 +20,15 @@ $(function(){
 	// });
 
 	$('.card__like').click( function(e){
+		e.preventDefault();
+		$(this).toggleClass('card__like--red');
+
+	});
+
+	$('.card__like').on(function(e){
+
+		e.preventDefault();
 		e.stopPropagation();
-		$(this).toggleClass('..card__like--red');
 
 	});
 
