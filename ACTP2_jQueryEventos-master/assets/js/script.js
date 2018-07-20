@@ -25,7 +25,20 @@ $(function(){
 
 	});
 
-	$('.card__like').on(function(e){
+	$('.card__like').on('click', function(e){
+
+		e.preventDefault();
+		e.stopPropagation();
+
+	});
+
+	$('.card__follow-btn').click( function(e){
+		e.preventDefault();
+		$(this).toggleClass('card__follow-btn--following');
+
+	});
+
+	$('.card__follow-btn').on('click' , function(e){
 
 		e.preventDefault();
 		e.stopPropagation();
