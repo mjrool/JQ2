@@ -2,28 +2,28 @@
 
 $(function(){
 
-$(window).on('load', function(){
-			alert("pagina cargada")
-		});
+	$('.card').click(function(e){
+		 e.preventDefault();
+	    $(this).toggleClass('card--open');
+	   
+	});
 
-$('.card').click(function(e){
-	 e.preventDefault();
-    $(this).toggleClass('.card--open');
-   
-});
+	$('.card').on('a', function(e){
 
-$('.card').click('a', function(e){
+		e.preventDefault();
+		e.stopPropagation();
 
-	e.preventDefault();
-	e.stopPropagation();
+	});
 
-})
+	// $(".card").click(function(e){
+	//     alert($(this).attr('alt'));
+	// });
 
-// $(".card__highlight").click(function(e){
-//     alert($(this).attr('alt'));
-// });
+	$('.card__like').click( function(e){
+		e.stopPropagation();
+		$(this).toggleClass('..card__like--red');
 
-
+	});
 
 });
 
